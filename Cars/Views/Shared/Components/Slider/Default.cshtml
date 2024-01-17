@@ -1,0 +1,85 @@
+﻿@model IEnumerable<SliderListItemVm>
+
+    <section class="about-bg" id="about">
+@foreach (var item in Model)
+{
+        <div class="container">
+            <div class="row section-heading">
+                <div class="col-12 main-heading text-center">
+                    <h2 class="main-font">@item.Title<span class="d-block text-blue">Auto Accessories</span></h2>
+                    <p class="alt-font mt-4">@item.Title2<span class="d-block"> @item.HeaderDescription</span></p>
+                </div>
+            </div>
+            <!--Row-->
+            <div class="row row-padding">
+                @if (!item.IsDeleted)
+                {
+                    <div class="col-12 col-md-4">
+                        <div class="news-item">
+                            <div class="image-holder-gallery">
+
+                                @if (!string.IsNullOrEmpty(item.ImageUrl))
+                                {
+                                    <img alt="image" src="~/Assets/image/stories/@item.ImageUrl">
+                                }
+                                else
+                                {
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS86IZUmQ77kOga8KSmc-o2rBXm22MDW3rdlsiBj2l_CQ&s">
+                                }
+                            </div>
+                            <div class="news-text-box">
+                                <a href="#"><h4 class="news-title main-font">@item.Title</h4></a>
+                                <p class="para alt-font">@item.Description</p>
+                                <a href="cars-automobile/standalone.html" class="text-capitalize btn-red">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--News Item-->
+                    <div class="col-12 col-md-4">
+                        <div class="news-item">
+                            <div class="image-holder-gallery">
+
+                                @if (!string.IsNullOrEmpty(item.ImageUrl))
+                                {
+                                    <img alt="image" src="~/Assets/image/stories/@item.ImageUrl">
+                                }
+                                else
+                                {
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS86IZUmQ77kOga8KSmc-o2rBXm22MDW3rdlsiBj2l_CQ&s">
+                                }
+                            </div>
+                            <div class="news-text-box">
+                                <a href="#"><h4 class="news-title main-font">@item.Title</h4></a>
+                                <p class="para alt-font">@item.Description</p>
+                                <a href="cars-automobile/standalone.html" class="text-capitalize btn-red">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--News Item-->
+                    <div class="col-12 col-md-4">
+                        <div class="news-item">
+                            <div class="image-holder-gallery">
+
+                                @if (!string.IsNullOrEmpty(item.ImageUrl))
+                                {
+                                    <img alt="image" src="~/Assets/image/stories/@item.ImageUrl">
+                                }
+                                else
+                                {
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS86IZUmQ77kOga8KSmc-o2rBXm22MDW3rdlsiBj2l_CQ&s">
+                                }
+                            </div>
+                            <div class="news-text-box">
+                                <a href="#"><h4 class="news-title main-font">@item.Title</h4></a>
+                                <p class="para alt-font">@item.Description</p>
+                                <a href="cars-automobile/standalone.html" class="text-capitalize btn-red">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+                <!--News Item-->
+
+            </div>
+        </div>
+}
+    </section>

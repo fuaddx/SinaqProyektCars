@@ -1,0 +1,122 @@
+﻿@model IEnumerable<SliderListItemVm>  
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+            <a asp-action="Create" class="btn btn-success">Create</a>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered"  width="100%" >
+                    <thead>
+                        <tr>
+                            <th>Title1</th>
+                            <th>Title2</th>
+                            <th>HeadDescription</th>
+                            <th>Image</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>CreatedTime</th>
+                            <th>UpdatedTime</th>
+                            @if (Model != null)
+                            {
+                                var action = Model.Count(item => item.IsDeleted);
+                                if (action > 0)
+                                {
+                                    <th class="text-center" colspan="3">Action</th>
+                                }
+                                else
+                                {
+                                    <th class="text-center" colspan="2">Action</th>
+                                }
+                            }
+                        </tr>
+                    </thead>
+                   
+                    <tbody>
+                        @if (Model != null)
+                        {
+                            @foreach (var item in Model)
+                            {
+                                <tr class='@(item.IsDeleted ? "bg-danger" : "")'>
+                                    <td>@item.Title1</td>
+                                    <td>@item.Title2</td>
+                                    <td>@item.HeaderDescription</td>
+                                    @if (!string.IsNullOrEmpty(item.ImageUrl))
+                                    {
+                                        <td style="width:50%"><img style="width:100%" src="~/Assets/image/stories/@item.ImageUrl"></td>
+                                    }
+                                    else
+                                    {
+                                        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS86IZUmQ77kOga8KSmc-o2rBXm22MDW3rdlsiBj2l_CQ&s"></td>
+                                    }
+                                    <td>@item.Title</td>
+                                      @if(!string.IsNullOrEmpty(item.Description)){
+                                        <td>
+                                            @item.Description
+                                        </td>
+                                        }
+                                        else
+                                        {
+                                        <td>No Description</td>
+                                        }
+                                    <td>@item.CreatedTime</td>
+                                    <td>@(item.UpdatedTime!= null ? item.UpdatedTime.ToString(): "No Update")</td>
+                                    <td class="text-center">
+                                        @if (item.IsDeleted)
+                                        {
+                                            <a class="btn btn-info" asp-action="Update" asp-route-id="@item.Id">Update</a>
+                                        }
+                                        else
+                                        {
+                                            <a class="btn btn-outline-info" asp-action="Update" asp-route-id="@item.Id">Update</a>
+                                        }
+                                    </td>
+                                    <td class="text-center">
+                                        @if (item.IsDeleted)
+                                        {
+                                            <form asp-action="RestoreData" asp-route-id="@item.Id" method="post">
+                                                <button type="submit" class="btn btn-success">Restore</button>
+                                            </form>
+                                        }
+                                        else
+                                        {
+                                            <form asp-action="DeleteProduct" asp-route-id="@item.Id" method="post">
+                                                <button type="submit" class="btn btn-outline-danger">Delete</button>
+                                            </form>
+                                        }
+                                    </td>
+                                    @if (item.IsDeleted)
+                                    {
+                                        <td style="text-center">
+                                            <form asp-action="DeleteFromData" asp-route-id="@item.Id" method="post">
+                                                <button type="submit" class="btn btn-dark">DeleteFromData</button>
+                                            </form>
+                                        </td>
+                                    }
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <td class="text-center" colspan="11">
+                                No data
+                            </td>
+                        }
+
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->

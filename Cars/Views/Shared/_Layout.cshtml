@@ -1,0 +1,530 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <!-- Author -->
+    <meta name="author" content="Themes Industry">
+    <!-- Description -->
+    <meta name="description" content="MegaOne is a highly creative, modern, visually stunning and Bootstrap responsive multipurpose studio and portfolio HTML5 template with ready home page demos.">
+    <!-- Page Title -->
+    <title>Cars Automobile | MegaOne HTML5 Template</title>
+    <!-- Favicon -->
+    <link href="~/Assets/cars-automobile/images/favicon.ico" rel="icon">
+    <!-- Bundle -->
+    <link href="~/Assets/vendor/css/bundle.min.css" rel="stylesheet">
+    <!-- Plugin Css -->
+    <link href="~/Assets/vendor/css/LineIcons.min.css" rel="stylesheet">
+    <link href="~/Assets/vendor/css/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="~/Assets/vendor/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/Assets/vendor/css/wow.css" rel="stylesheet">
+    <!-- Style Sheet -->
+    <link href="~/Assets/cars-automobile/css/tootik.min.css" rel="stylesheet">
+    <link href="~/Assets/cars-automobile/css/line-awesome.min.css" rel="stylesheet">
+    <link href="~/Assets/cars-automobile/css/model-window.css" rel="stylesheet">
+    <link href="~/Assets/cars-automobile/css/style.css" rel="stylesheet">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="90">
+
+    <!-- PRELOADER -->
+    <div class="loader" id="loader-fade">
+        <div class="loader-container">
+            <div class="loader-block"></div>
+            <div class="loader-block"></div>
+            <div class="loader-block"></div>
+            <div class="loader-block"></div>
+            <div class="loader-block"></div>
+            <div class="loader-block"></div>
+            <div class="loader-block"></div>
+            <div class="loader-block"></div>
+            <div class="loader-block"></div>
+            <div class="loader-block"></div>
+            <div class="loader-block"></div>
+            <div class="loader-block"></div>
+            <div class="loader-block"></div>
+            <div class="loader-block"></div>
+            <div class="loader-block"></div>
+            <div class="loader-block"></div>
+        </div>
+    </div>
+    <!-- PRELOADER -->
+    <!-- START HEADER -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg nav-bottom-line center-brand static-nav">
+            <div class="container">
+                <a class="navbar-brand scroll" href="#slider-area">
+                    <img src="~/Assets/cars-automobile/images/logo.png" alt="logo" class="logo-default">
+                    <img src="~/Assets/cars-automobile/images/logo.png" alt="logo" class="logo-scrolled">
+                </a>
+                <button class="navbar-toggler navbar-toggler-right d-none collapsed" type="button" data-toggle="collapse" data-target="#xenav">
+                    <span> </span>
+                    <span> </span>
+                    <span> </span>
+                </button>
+                <li class="top-personal-info"><a href="#"><i class="las la-phone"></i> +1 631 123 4567</a></li>
+                <div class="collapse navbar-collapse" id="xenav">
+                    <ul class="navbar-nav" id="container">
+                        <li class="nav-item">
+                            <a class="nav-link scroll" href="#about">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll" href="#all-products">Browse Products</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto mr-0 mr-lg-4">
+                        <li class="nav-item">
+                            <a class="nav-link scroll" href="#reviews">Customer Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll" href="#contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-social side-icons">
+                    <ul class="list-unstyled d-flex m-0">
+                        <a class="social-icon-clr" href="javascript:void(0);"><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-icon-clr" href="javascript:void(0);"><i class="fab fa-twitter"></i></a>
+                        <a class="social-icon-clr" href="javascript:void(0);"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon-clr" href="javascript:void(0);"><i class="fab fa-instagram"></i></a>
+                    </ul>
+                </div>
+            </div>
+
+            <!--side menu open button-->
+            <a href="javascript:void(0)" class="d-inline-block sidemenu_btn" id="sidemenu_toggle">
+                <span></span> <span></span> <span></span>
+            </a>
+        </nav>
+
+        <!-- side menu -->
+        <div class="side-menu">
+            <div class="inner-wrapper">
+                <span class="btn-close" id="btn_sideNavClose"><i></i><i></i></span>
+                <nav class="side-nav w-100">
+                    <ul class="navbar-nav">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li>
+                                <a asp-action="Logout" asp-controller="Auth" style="font-size:1.5rem;color:white" >Logout</a>
+                                
+                            </li>
+                            <li>
+                                <span style="font-size:1.5rem;color:white">Hi ,@User.Identity.Name &#128512</span>
+                            </li>
+                        }
+                        else
+                        {
+                            <li>
+                                <a asp-action="Login" asp-controller="Auth" style="font-size:1.5rem;color:white">Login</a>
+
+                            </li>
+                            <li>
+                                <a asp-action="Register" asp-controller="Auth" style="font-size:1.5rem;color:white">Register</a>
+                            </li>
+                        }
+                        <li class="nav-item">
+                            <a class="nav-link scroll" href="#slider-area">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " asp-area="Admin" asp-action="Index" asp-controller="Slider">Admin Panel</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll" href="#about">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll" href="#all-products">Browse Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll" href="#reviews">Customer Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll" href="#contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="side-footer w-100">
+                    <p>© 2020 MegaOne. Made With Love by Themesindustry</p>
+                </div>
+            </div>
+        </div>
+        <a id="close_side_menu" href="javascript:void(0);"></a>
+        <!-- End side menu -->
+    </header>
+    <!-- START HEADER -->
+    @RenderBody()
+    <!-- START CONTACT -->
+    <section class="section slide5 contact-sec" id="contact">
+        <div class="container expand-container">
+            <div class="row row">
+                <div class="col-12 col-lg-7 main-heading">
+                    <h2 class="main-font">Questions?<span class="d-block text-blue">Lets Get In Touch</span></h2>
+                    <form class="row contact-form row-padding" id="contact-form-data">
+                        <div class="col-12 col-lg-8" id="result"></div>
+                        <div class="col-12 col-lg-8">
+                            <input type="text" name="userName" placeholder="Name" class="form-control">
+                            <input type="text" name="userPhone" placeholder="Contact No" class="form-control">
+                            <input type="email" name="userEmail" placeholder="Email" class="form-control">
+                            <textarea class="form-control" name="userMessage" rows="6" placeholder="Type Your Message Here"></textarea>
+                            <a href="javascript:void(0);" class="btn btn-medium btn-rounded btn-red rounded-pill w-100 contact_btn main-font">Submit Information</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-12 col-lg-5 text-center text-lg-left d-flex align-items-center">
+                    <div class="contact-details wow fadeInRight">
+                        <h4 class="heading main-font">Store Location</h4>
+                        <p class="text alt-font">There are many variations of passages of Lorem Ipsum available, but the majority have suffered .</p>
+                        <ul>
+                            <li><i aria-hidden="true" class="fas fa-map-marker-alt"></i> 123 Park Avenue, New York, United States </li>
+                            <li>
+                                <i aria-hidden="true" class="fas fa-phone-volume"></i>
+                                <span>+1 631 1234 5678</span>
+                                <span>+1 631 1234 5678</span>
+                            </li>
+                            <li><i aria-hidden="true" class="fas fa-paper-plane"></i>email@website.com</li>
+                        </ul>
+                        <div class="slider-social side-icons">
+                            <ul class="list-unstyled d-flex">
+                                <a class="social-icon" href="javascript:void(0);"><i class="fab fa-facebook-f"></i></a>
+                                <a class="social-icon" href="javascript:void(0);"><i class="fab fa-twitter"></i></a>
+                                <a class="social-icon" href="javascript:void(0);"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="social-icon" href="javascript:void(0);"><i class="fab fa-instagram"></i></a>
+                                <a class="social-icon" href="javascript:void(0);"><i class="fab fa-pinterest-p"></i></a>
+                                <a class="social-icon" href="javascript:void(0);"><i class="fab fa-google-plus-g"></i></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END CONTACT -->
+
+
+    <div id="data-modal">
+        <!-- Modal Window 1 Start -->
+        <div class="modal-window" id="morphic-window1">
+            <div class="modal-body">
+                <header>
+                    <span class="close-modal"><i></i><i></i></span>
+                </header>
+                <div class="morphic-body">
+                    <div class="container">
+                        <div class="row main-morphic-body align-items-center">
+                            <div class="morphic-img col-12 col-md-6">
+                                <!-- Main Image -->
+                                <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+                                    <!--Slides-->
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="carousel-item active">
+                                            <img class="d-block w-100" src="~/Assets/cars-automobile/images/model-windows/modal-img-1.png" alt="First slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="~/Assets/cars-automobile/images/model-windows/modal-img-2.png" alt="Second slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="~/Assets/cars-automobile/images/model-windows/modal-img-3.png" alt="Third slide">
+                                        </div>
+                                    </div>
+                                    <!--/.Slides-->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel-thumb" data-slide-to="0" class="active">
+                                            <img class="d-block w-100 img-fluid" src="~/Assets/cars-automobile/images/model-windows/modal2-sub1.png" alt="First slide">
+                                        </li>
+                                        <li data-target="#carousel-thumb" data-slide-to="1">
+                                            <img class="d-block w-100 img-fluid" src="~/Assets/cars-automobile/images/model-windows/modal2-sub2.png" alt="Second slide">
+                                        </li>
+                                        <li data-target="#carousel-thumb" data-slide-to="2">
+                                            <img class="d-block w-100 img-fluid" src="~/Assets/cars-automobile/images/model-windows/modal2-sub3.png" alt="Third slide">
+                                        </li>
+                                    </ol>
+                                </div>
+                                <!--/.Carousel Wrapper-->
+                            </div>
+                            <div class="morphic-title col-12 col-md-6">
+                                <h5>Article PZ-1000-23</h5>
+                                <h3>Imported Car Tire</h3>
+                                <p>Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has been the industry’s standard dummy. </p>
+
+                                <div class="row pb-md-4">
+                                    <!-- Sizes -->
+                                    <div class="col-3 col-md-2 d-flex align-items-center align-items-lg-end">
+                                        <div class="color-selection">
+                                            <h6 class="text-center text-md-left text-blue alt-font">Size:</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-9 col-md-10">
+                                        <div class="color-picker text-center text-md-left">
+                                            <div class="size__item">
+                                                <a class="active">155/75</a>
+                                                <a>165/75</a>
+                                                <a>185/75</a>
+                                                <a>210/75</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row pb-4 mt-3 mt-md-0">
+                                    <!-- Quantity -->
+                                    <div class="col-3 col-md-1 col-lg-2 d-flex align-items-center align-items-md-start">
+                                        <div class="color-selection">
+                                            <h6 class="text-center text-md-left text-blue alt-font">Qty:</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-9 col-lg-4 input_plus_mins">
+                                        <div class="qty">
+                                            <span class="minus bg-dark"><i class="lni-minus"></i></span>
+                                            <input type="number" class="count" name="qty" value="1">
+                                            <span class="plus bg-dark"><i class="lni-plus"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 price-modal"><h1>$299.00</h1></div>
+                                    <div class="col-12 modal-btn"><a target="_blank" href="https://www.amazon.com/" class="btn btn-medium btn-rounded btn-red text-capitalize">Buy Link</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Next & Prev  -->
+                        <div class="row justify-content-end">
+                            <div class="d-none d-md-block left-arrow-sec text-center mt-auto mb-auto">
+                                <a class="d-flex justify-content-center" onclick="prev_window('morphic-window3');"><i class="fa fa-angle-left"></i></a>
+                            </div>
+                            <div class="d-none d-md-block right-arrow-sec text-center mt-auto mb-auto">
+                                <a class="d-flex justify-content-center" onclick="next_window('morphic-window2');"><i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Window 1 End -->
+        <!-- Modal Window 2 Start -->
+        <div class="modal-window" id="morphic-window2">
+            <div class="modal-body">
+                <header>
+                    <span class="close-modal"><i></i><i></i></span>
+                </header>
+                <div class="morphic-body">
+                    <div class="container">
+                        <div class="row main-morphic-body align-items-center">
+                            <div class="morphic-img col-12 col-md-6">
+                                <!-- Main Image -->
+                                <div id="carousel-thumb2" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+                                    <!--Slides-->
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="carousel-item active">
+                                            <img class="d-block w-100" src="~/Assets/cars-automobile/images/model-windows/modal-img-1.png" alt="First slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="~/Assets/cars-automobile/images/model-windows/modal-img-2.png" alt="Second slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="~/Assets/cars-automobile/images/model-windows/modal-img-3.png" alt="Third slide">
+                                        </div>
+                                    </div>
+                                    <!--/.Slides-->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel-thumb2" data-slide-to="0" class="active">
+                                            <img class="d-block w-100 img-fluid" src="~/Assets/cars-automobile/images/model-windows/modal1-sub1.png" alt="First slide">
+                                        </li>
+                                        <li data-target="#carousel-thumb2" data-slide-to="1">
+                                            <img class="d-block w-100 img-fluid" src="~/Assets/cars-automobile/images/model-windows/modal1-sub2.png" alt="Second slide">
+                                        </li>
+                                        <li data-target="#carousel-thumb2" data-slide-to="2">
+                                            <img class="d-block w-100 img-fluid" src="~/Assets/cars-automobile/images/model-windows/modal1-sub3.png" alt="Third slide">
+                                        </li>
+                                    </ol>
+                                </div>
+                                <!--/.Carousel Wrapper-->
+                            </div>
+                            <div class="morphic-title col-12 col-md-6">
+                                <h5>Article PZ-1000-23</h5>
+                                <h3>Tire Alloy Rims</h3>
+                                <p>Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has been the industry’s standard dummy. </p>
+
+                                <div class="row pb-md-4">
+                                    <!-- Sizes -->
+                                    <div class="col-3 col-md-2 d-flex align-items-center align-items-lg-end">
+                                        <div class="color-selection">
+                                            <h6 class="text-center text-md-left text-blue alt-font">Size:</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-9 col-md-10">
+                                        <div class="color-picker text-center text-md-left">
+                                            <div class="size__item">
+                                                <a class="active">155/75</a>
+                                                <a>165/75</a>
+                                                <a>185/75</a>
+                                                <a>210/75</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row pb-4 mt-3 mt-md-0">
+                                    <!-- Quantity -->
+                                    <div class="col-3 col-md-1 col-lg-2 d-flex align-items-center align-items-md-start">
+                                        <div class="color-selection">
+                                            <h6 class="text-center text-md-left text-blue alt-font">Qty:</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-9 col-lg-4 input_plus_mins">
+                                        <div class="qty">
+                                            <span class="minus bg-dark"><i class="lni-minus"></i></span>
+                                            <input type="number" class="count" name="qty" value="1">
+                                            <span class="plus bg-dark"><i class="lni-plus"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 price-modal"><h1>$299.00</h1></div>
+                                    <div class="col-12 modal-btn"><a target="_blank" href="https://www.amazon.com/" class="btn btn-medium btn-rounded btn-red text-capitalize">Buy Link</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Next & Prev  -->
+                        <div class="row justify-content-end">
+                            <div class="d-none d-md-block left-arrow-sec text-center mt-auto mb-auto">
+                                <a class="d-flex justify-content-center" onclick="prev_window('morphic-window1');"><i class="fa fa-angle-left"></i></a>
+                            </div>
+                            <div class="d-none d-md-block right-arrow-sec text-center mt-auto mb-auto">
+                                <a class="d-flex justify-content-center" onclick="next_window('morphic-window3');"><i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Window 2 End -->
+        <!-- Modal Window 3 Start -->
+        <div class="modal-window" id="morphic-window3">
+            <div class="modal-body">
+                <header>
+                    <span class="close-modal"><i></i><i></i></span>
+                </header>
+                <div class="morphic-body">
+                    <div class="container">
+                        <div class="row main-morphic-body align-items-center">
+                            <div class="morphic-img col-12 col-md-6">
+                                <!-- Main Image -->
+                                <div id="carousel-thumb3" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+                                    <!--Slides-->
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="carousel-item active">
+                                            <img class="d-block w-100" src="~/Assets/cars-automobile/images/model-windows/modal-img-1.png" alt="First slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="~/Assets/cars-automobile/images/model-windows/modal-img-2.png" alt="Second slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="~/Assets/cars-automobile/images/model-windows/modal-img-3.png" alt="Third slide">
+                                        </div>
+                                    </div>
+                                    <!--/.Slides-->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel-thumb3" data-slide-to="0" class="active">
+                                            <img class="d-block w-100 img-fluid" src="~/Assets/cars-automobile/images/model-windows/modal1-sub1.png" alt="First slide">
+                                        </li>
+                                        <li data-target="#carousel-thumb3" data-slide-to="1">
+                                            <img class="d-block w-100 img-fluid" src="~/Assets/cars-automobile/images/model-windows/modal1-sub2.png" alt="Second slide">
+                                        </li>
+                                        <li data-target="#carousel-thumb3" data-slide-to="2">
+                                            <img class="d-block w-100 img-fluid" src="~/Assets/cars-automobile/images/model-windows/modal1-sub3.png" alt="Third slide">
+                                        </li>
+                                    </ol>
+                                </div>
+                                
+                                <!--/.Carousel Wrapper-->
+                            </div>
+                            <div class="morphic-title col-12 col-md-6">
+                                <h5>Article PZ-1000-23</h5>
+                                <h3>Engine Suspension</h3>
+                                <p>Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has been the industry’s standard dummy. </p>
+
+                                <div class="row pb-md-4">
+                                    <!-- Sizes -->
+                                    <div class="col-3 col-md-2 d-flex align-items-center align-items-lg-end">
+                                        <div class="color-selection">
+                                            <h6 class="text-center text-md-left text-blue alt-font">Size:</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-9 col-md-10">
+                                        <div class="color-picker text-center text-md-left">
+                                            <div class="size__item">
+                                                <a class="active">155/75</a>
+                                                <a>165/75</a>
+                                                <a>185/75</a>
+                                                <a>210/75</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row pb-4 mt-3 mt-md-0">
+                                    <!-- Quantity -->
+                                    <div class="col-3 col-md-1 col-lg-2 d-flex align-items-center align-items-md-start">
+                                        <div class="color-selection">
+                                            <h6 class="text-center text-md-left text-blue alt-font">Qty:</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-9 col-lg-4 input_plus_mins">
+                                        <div class="qty">
+                                            <span class="minus bg-dark"><i class="lni-minus"></i></span>
+                                            <input type="number" class="count" name="qty" value="1">
+                                            <span class="plus bg-dark"><i class="lni-plus"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 price-modal"><h1>$299.00</h1></div>
+                                    <div class="col-12 modal-btn"><a target="_blank" href="https://www.amazon.com/" class="btn btn-medium btn-rounded btn-red text-capitalize">Buy Link</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Next & Prev  -->
+                        <div class="row justify-content-end">
+                            <div class="d-none d-md-block left-arrow-sec text-center mt-auto mb-auto">
+                                <a class="d-flex justify-content-center" onclick="prev_window('morphic-window2');"><i class="fa fa-angle-left"></i></a>
+                            </div>
+                            <div class="d-none d-md-block right-arrow-sec text-center mt-auto mb-auto">
+                                <a class="d-flex justify-content-center" onclick="next_window('morphic-window1');"><i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Window 3 End -->
+    </div>
+
+    <!--START SCROLL TOP-->
+    <div class="go-top"><i class="fas fa-angle-up"></i><i class="fas fa-angle-up"></i></div>
+    <!--END SCROLL TOP-->
+    <!-- JavaScript -->
+    <script src="~/Assets/vendor/js/bundle.min.js"></script>
+    <!-- Plugin Js -->
+    <script src="~/Assets/vendor/js/jquery.appear.js"></script>
+    <script src="~/Assets/vendor/js/jquery.fancybox.min.js"></script>
+    <script src="~/Assets/vendor/js/owl.carousel.min.js"></script>
+    <script src="~/Assets/vendor/js/parallaxie.min.js"></script>
+    <script src="~/Assets/vendor/js/wow.min.js"></script>
+    <script src="~/Assets/vendor/js/jquery.cubeportfolio.min.js"></script>
+    <!-- REVOLUTION JS FILES -->
+    <script src="~/Assets/vendor/js/jquery.themepunch.tools.min.js"></script>
+    <script src="~/Assets/vendor/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- SLIDER REVOLUTION EXTENSIONS -->
+    <script src="~/Assets/vendor/js/morphext.min.js"></script>
+    <script src="~/Assets/vendor/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="~/Assets/vendor/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="~/Assets/vendor/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="~/Assets/vendor/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="~/Assets/vendor/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="~/Assets/vendor/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="~/Assets/vendor/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="~/Assets/vendor/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="~/Assets/vendor/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- CUSTOM JS -->
+    <script src="~/Assets/vendor/js/contact_us.js"></script>
+    <script src="~/Assets/cars-automobile/js/script.js"></script>
+</body>
+</html>
+       
+    
